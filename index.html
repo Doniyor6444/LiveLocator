@@ -1,45 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geolokatsiya</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-#location {
-    font-size: 1.2em;
-    color: #333;
-}
-    </style>
+    <title>Joylashuv va Xarita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Joylashuvingiz</h1>
-        <p id="location">Joylashuvingiz aniqlanmoqda...</p>
-    </div>
+    <header>
+        <h1>Joylashuv va Xarita</h1>
+    </header>
 
+    <div class="container">
+        <div class="location-info-container">
+            <div class="card location-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p id="location">
+                        <span class="loading">
+                            <span class="spinner"></span>
+                            Joylashuvingiz aniqlanmoqda...
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p id="local-time">
+                        <span class="loading">
+                            <span class="spinner"></span>
+                            Mahalliy vaqt aniqlanmoqda...
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <p>Yaqin atrofdagi joylar:</p>
+                        <ul id="nearby-places" class="places-list">
+                            <li>
+                                <span class="loading">
+                                    <span class="spinner"></span>
+                                    Joylar aniqlanmoqda...
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button id="refresh-button" class="btn">
+                    <i class="fas fa-sync-alt"></i> Yangilash
+                </button>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div id="map">
+                <div class="loading">
+                    <span class="spinner"></span>
+                    Xarita yuklanmoqda...
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
