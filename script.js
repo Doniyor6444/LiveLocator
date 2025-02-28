@@ -1,6 +1,6 @@
    
         // API kaliti (faqat bir joyda aniqlanadi)
-        const apiKey = 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY'; // Eslatma: O'zingizning kalitingizni kiriting
+        const apiKey = 'AIzaSyA7ChXzekgIu3OxFvJM-2ktQqetuJHUpig'; // O'zingizning API kalitingiz// Eslatma: O'zingizning kalitingizni kiriting
         let map, userMarker, placesService;
         
         // DOM elementlarini olish
@@ -212,3 +212,5 @@
         
         // Sahifa yuklanganda xaritani ishga tushirish
         document.addEventListener('DOMContentLoaded', initMap);
+
+        
