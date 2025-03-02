@@ -1,7 +1,7 @@
 const apiKey = 'AIzaSyA7ChXzekgIu3OxFvJM-2ktQqetuJHUpig';
 let map, userMarker, placesService;
 
-// DOM elementlarni olish
+
 const locationElement = document.getElementById('location');
 const timeElement = document.getElementById('local-time');
 const placesElement = document.getElementById('nearby-places');
